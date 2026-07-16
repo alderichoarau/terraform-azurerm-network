@@ -18,7 +18,8 @@ resource "azurerm_resource_group" "example" {
 }
 
 module "network" {
-  source = "github.com/alderichoarau/terraform-azurerm-network"
+  source  = "app.terraform.io/alderic-hoarau/network/azurerm"
+  version = "~> 0.1"
 
   name                = "example"
   resource_group_name = azurerm_resource_group.example.name

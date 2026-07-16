@@ -10,7 +10,8 @@ Terraform module that provisions a VNet with a frontend and backend subnet, each
 
 ```hcl
 module "network" {
-  source = "github.com/alderichoarau/terraform-azurerm-network"
+  source  = "app.terraform.io/alderic-hoarau/network/azurerm"
+  version = "~> 0.1"
 
   name                 = "my-project"
   resource_group_name  = azurerm_resource_group.this.name
